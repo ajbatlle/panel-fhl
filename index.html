@@ -117,8 +117,8 @@
 
   /* ---------- Pilar chips ---------- */
   .pill { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.01em; padding:3px 7px; border-radius:2px; color:#FFF; white-space:nowrap; }
-  .pill.conocimiento{background:#4D4E56}.pill.proyectos{background:#E28757}
-  .pill.avances{background:#78AA6D}.pill.incidencia{background:#7A80A3}
+  .pill.prensa{background:#7A80A3}.pill.institucional{background:#E28757}
+  .pill.avances{background:#78AA6D}
   .pill.sin{background:transparent;color:var(--ink-faint);border:1px dashed var(--line)}
 
   .estado { font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; border:1px solid transparent; }
@@ -244,6 +244,11 @@
   .tareaedit { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
   .tareaedit input[type="checkbox"] { width:auto; flex:none; }
   .tareaedit input[type="text"] { flex:1; }
+  .tareaedit input[type="date"] { flex:none; width:auto; font-size:12px; padding:5px 7px; }
+  .tfecha { flex:none; margin-left:auto; font-style:normal; font-size:11px; font-weight:700;
+            color:var(--ink-soft); white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .tfecha.vencida { color:var(--warn); }
+  .tasks li.done .tfecha { color:var(--ink-faint); font-weight:500; }
   .tasks { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; }
   .tasks li { display:flex; align-items:flex-start; gap:8px; font-size:13px; padding:3px 0; }
   .tasks li input { margin-top:3px; flex:none; width:auto; }
@@ -377,7 +382,7 @@
 <div id="app"></div>
 
 <script id="estado-inicial" type="application/json">
-{"version":2,"meses":{"2026-09":{},"2026-10":{}},"mesas":{"mesa-mejillones":{"id":"mesa-mejillones","nombre":"Mejillones","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-arica":{"id":"mesa-arica","nombre":"Arica","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-antofagasta":{"id":"mesa-antofagasta","nombre":"Antofagasta","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-ollague":{"id":"mesa-ollague","nombre":"Ollagüe","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-monte-patria":{"id":"mesa-monte-patria","nombre":"Monte Patria","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-salamanca":{"id":"mesa-salamanca","nombre":"Salamanca","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-freirina":{"id":"mesa-freirina","nombre":"Freirina","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-tiltil":{"id":"mesa-tiltil","nombre":"Tiltil","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-san-esteban":{"id":"mesa-san-esteban","nombre":"San Esteban","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-san-pedro":{"id":"mesa-san-pedro","nombre":"San Pedro","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-la-estrella":{"id":"mesa-la-estrella","nombre":"La Estrella","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-los-andes":{"id":"mesa-los-andes","nombre":"Los Andes","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-codegua":{"id":"mesa-codegua","nombre":"Codegua","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-mostazal":{"id":"mesa-mostazal","nombre":"Mostazal","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-antuco":{"id":"mesa-antuco","nombre":"Antuco","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-quilleco":{"id":"mesa-quilleco","nombre":"Quilleco","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-talcahuano":{"id":"mesa-talcahuano","nombre":"Talcahuano","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-alto-biobio":{"id":"mesa-alto-biobio","nombre":"Alto Biobío","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-coronel":{"id":"mesa-coronel","nombre":"Coronel","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-los-lagos":{"id":"mesa-los-lagos","nombre":"Los Lagos","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-guaitecas":{"id":"mesa-guaitecas","nombre":"Guaitecas","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-cochamo":{"id":"mesa-cochamo","nombre":"Cochamó","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-cisnes":{"id":"mesa-cisnes","nombre":"Cisnes","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-timaukel":{"id":"mesa-timaukel","nombre":"Timaukel","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"area-comunicaciones":{"id":"area-comunicaciones","nombre":"Comunicaciones","zona":"Nacional","tipo":"area","tareas":[],"activo":false},"area-dialogo-territorial":{"id":"area-dialogo-territorial","nombre":"Diálogo Territorial","zona":"Nacional","tipo":"area","tareas":[],"activo":false},"area-desarrollo":{"id":"area-desarrollo","nombre":"Desarrollo","zona":"Nacional","tipo":"area","tareas":[],"activo":false}}}
+{"version":2,"meses":{"2026-09":{"g20260909":{"id":"g20260909","fecha":"2026-09-09","pilar":"institucional","titular":"¿Qué es el Desarrollo Local?","copy":"Primer post de la serie de conocimiento. Explica qué entendemos por desarrollo local: la articulación entre municipios, empresas y comunidades para diseñar y ejecutar proyectos de inversión pública en el territorio. Una lámina por actor con el rol que cumple, y una final con el resultado de esa articulación. Portada lista.","estado":"En diseño"},"g20260911":{"id":"g20260911","fecha":"2026-09-11","pilar":"avances","titular":"[Avance por definir]","copy":"Viernes de avances. Lo que efectivamente pasó esa semana: firma de convenio, visita a terreno, hito de obra, participación en una actividad pública o una salida en prensa. Se define el miércoles previo con el equipo. Formato probable: post simple con foto documental, o carrusel corto si hay material.","estado":"Pendiente"},"g20260914":{"id":"g20260914","fecha":"2026-09-14","pilar":"prensa","titular":"[Cuña de prensa — por definir]","copy":"Primer lunes de prensa: acá se fija la plantilla de la cuña, que después se reusa todas las semanas. Lunes de prensa. Lámina única: la cuña textual grande y, al pie, quién la dijo, en qué medio y cuándo. En el copy van dos o tres frases de contexto y el link a la nota. [Definir la cuña de la semana: revisar apariciones en prensa, columnas publicadas y menciones a la fundación.]","estado":"Pendiente"},"g20260916":{"id":"g20260916","fecha":"2026-09-16","pilar":"institucional","titular":"VIDEO 1 — Por qué un municipio pequeño no logra postular a fondos públicos","copy":"Video vertical de 60 a 90 segundos, grabado en oficina. Cámara fija, subtítulos incrustados, sin música. Habla el director ejecutivo y responde tres preguntas en orden: cuántas comunas no tienen equipo de proyectos, qué pasa con los fondos disponibles cuando no hay quien los postule, y qué hace falta para cambiarlo. [Confirmar antes de grabar la cifra de comunas sin unidad de proyectos y su fuente.]","estado":"Pendiente"},"g20260918":{"id":"g20260918","fecha":"2026-09-18","pilar":"avances","titular":"[Avance por definir — 18 de septiembre]","copy":"Ojo: el 18 de septiembre es feriado y el alcance de una publicación ese día es bajo. Las opciones son un saludo institucional sobrio (foto de territorio y texto corto) o dejar el día vacío. Se decide la semana previa. Viernes de avances. Lo que efectivamente pasó esa semana: firma de convenio, visita a terreno, hito de obra, participación en una actividad pública o una salida en prensa. Se define el miércoles previo con el equipo. Formato probable: post simple con foto documental, o carrusel corto si hay material.","estado":"Pendiente"},"g20260921":{"id":"g20260921","fecha":"2026-09-21","pilar":"prensa","titular":"[Cuña de prensa — por definir]","copy":"Lunes de prensa. Lámina única: la cuña textual grande y, al pie, quién la dijo, en qué medio y cuándo. En el copy van dos o tres frases de contexto y el link a la nota. [Definir la cuña de la semana: revisar apariciones en prensa, columnas publicadas y menciones a la fundación.]","estado":"Pendiente"},"g20260923":{"id":"g20260923","fecha":"2026-09-23","pilar":"institucional","titular":"Conoce los Fondos de Inversión Pública","copy":"Los tres fondos a los que puede postular un municipio para financiar obras. Una lámina por fondo: qué financia, quién postula y de qué montos estamos hablando. Portada lista. [Confirmar con el área técnica los tres fondos a incluir y los montos, y citar la fuente al pie de cada lámina.]","estado":"En diseño"},"g20260925":{"id":"g20260925","fecha":"2026-09-25","pilar":"avances","titular":"[Avance por definir]","copy":"Viernes de avances. Lo que efectivamente pasó esa semana: firma de convenio, visita a terreno, hito de obra, participación en una actividad pública o una salida en prensa. Se define el miércoles previo con el equipo. Formato probable: post simple con foto documental, o carrusel corto si hay material.","estado":"Pendiente"},"g20260928":{"id":"g20260928","fecha":"2026-09-28","pilar":"prensa","titular":"[Cuña de prensa — por definir]","copy":"Lunes de prensa. Lámina única: la cuña textual grande y, al pie, quién la dijo, en qué medio y cuándo. En el copy van dos o tres frases de contexto y el link a la nota. [Definir la cuña de la semana: revisar apariciones en prensa, columnas publicadas y menciones a la fundación.]","estado":"Pendiente"},"g20260930":{"id":"g20260930","fecha":"2026-09-30","pilar":"institucional","titular":"¿Qué es una Mesa de Convergencia?","copy":"Qué es una mesa de convergencia y cómo funciona: quién la convoca, quiénes se sientan en ella (municipio, empresa y comunidad) y qué tipo de decisiones se toman ahí. Una lámina por participante y una final con el recorrido de una mesa, desde la convocatoria hasta el acuerdo. Portada lista.","estado":"En diseño"}},"2026-10":{"g20261005":{"id":"g20261005","fecha":"2026-10-05","pilar":"prensa","titular":"[Reporte de prensa — semana del 28 de septiembre]","copy":"Lunes de prensa. Reporte semanal: notas de prensa y lugares donde estuvo la fundación durante la semana anterior. [Formato por conversar con el equipo: cuántas apariciones caben, de dónde se sacan y quién las junta antes del lunes.]","estado":"Pendiente"},"g20261007":{"id":"g20261007","fecha":"2026-10-07","pilar":"institucional","titular":"[Propuesta] ¿Por qué una comuna pequeña no logra postular a fondos públicos?","copy":"Serie de conocimiento. El tema que iba a ser el Video 1, ahora como carrusel: cuántas comunas no tienen equipo de proyectos, qué pasa con los fondos cuando nadie los postula y qué hace falta para que eso cambie. Cierre: el trabajo de Huella Local con esos municipios. [Confirmar las cifras y su fuente antes de diseñar.] Formato de la serie: carrusel con portada de foto y overlay, láminas de texto sobre color plano con el dato destacado, y cierre con foto, bloque azul, logo y Comenta · Comparte · Guárdalo.","estado":"Pendiente"},"g20261014":{"id":"g20261014","fecha":"2026-10-14","pilar":"institucional","titular":"[Propuesta] ¿Qué es una carpeta técnica?","copy":"Serie de conocimiento. Desarrolla el paso Estudios → Carpeta técnica → Postulación → Obra, presentado en el post de la Mesa de Convergencia: qué estudios lleva una carpeta, quién la hace y por qué sin ella no se puede postular. [Confirmar el contenido con el área técnica.] Formato de la serie: carrusel con portada de foto y overlay, láminas de texto sobre color plano con el dato destacado, y cierre con foto, bloque azul, logo y Comenta · Comparte · Guárdalo.","estado":"Pendiente"},"g20261019":{"id":"g20261019","fecha":"2026-10-19","pilar":"prensa","titular":"[Reporte de prensa — 5 al 16 de octubre]","copy":"Lunes de prensa. Reporte semanal: notas de prensa y lugares donde estuvo la fundación entre el 5 y el 16 de octubre (dos semanas, porque el lunes 12 es feriado). Incluye el lanzamiento de Diálogos para el Desarrollo en Sierra Gorda, el 7 de octubre. [Formato por conversar con el equipo: cuántas apariciones caben, de dónde se sacan y quién las junta antes del lunes.]","estado":"Pendiente"},"g20261021":{"id":"g20261021","fecha":"2026-10-21","pilar":"institucional","titular":"[Propuesta] ¿Cómo se aprueba un proyecto de inversión pública?","copy":"Serie de conocimiento. El recorrido de un proyecto desde que el municipio lo postula hasta que tiene financiamiento: quién lo evalúa, qué se revisa y cuánto se demora. [Confirmar etapas, nombres de los sistemas e instituciones y plazos con el área técnica.] Formato de la serie: carrusel con portada de foto y overlay, láminas de texto sobre color plano con el dato destacado, y cierre con foto, bloque azul, logo y Comenta · Comparte · Guárdalo.","estado":"Pendiente"},"g20261026":{"id":"g20261026","fecha":"2026-10-26","pilar":"prensa","titular":"[Reporte de prensa — semana del 19 de octubre]","copy":"Lunes de prensa. Reporte semanal: notas de prensa y lugares donde estuvo la fundación durante la semana anterior. [Formato por conversar con el equipo: cuántas apariciones caben, de dónde se sacan y quién las junta antes del lunes.]","estado":"Pendiente"},"g20261028":{"id":"g20261028","fecha":"2026-10-28","pilar":"institucional","titular":"[Propuesta] ¿Dónde trabaja Huella Local?","copy":"Serie de conocimiento. Mapa con las comunas donde la fundación ha articulado Mesas de Convergencia, de Arica a Timaukel, agrupadas por zona (Norte, Centro, Sur, Austral), con una o dos obras como ejemplo. [Confirmar el listado: en el panel hay 25 comunas cargadas y el post de la Mesa dice más de 40.] Formato de la serie: carrusel con portada de foto y overlay, láminas de texto sobre color plano con el dato destacado, y cierre con foto, bloque azul, logo y Comenta · Comparte · Guárdalo.","estado":"Pendiente"}}},"mesas":{"mesa-mejillones":{"id":"mesa-mejillones","nombre":"Mejillones","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-arica":{"id":"mesa-arica","nombre":"Arica","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-antofagasta":{"id":"mesa-antofagasta","nombre":"Antofagasta","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-ollague":{"id":"mesa-ollague","nombre":"Ollagüe","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-monte-patria":{"id":"mesa-monte-patria","nombre":"Monte Patria","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-salamanca":{"id":"mesa-salamanca","nombre":"Salamanca","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-freirina":{"id":"mesa-freirina","nombre":"Freirina","zona":"Norte","tareas":[],"activo":false,"tipo":"comuna"},"mesa-tiltil":{"id":"mesa-tiltil","nombre":"Tiltil","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-san-esteban":{"id":"mesa-san-esteban","nombre":"San Esteban","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-san-pedro":{"id":"mesa-san-pedro","nombre":"San Pedro","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-la-estrella":{"id":"mesa-la-estrella","nombre":"La Estrella","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-los-andes":{"id":"mesa-los-andes","nombre":"Los Andes","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-codegua":{"id":"mesa-codegua","nombre":"Codegua","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-mostazal":{"id":"mesa-mostazal","nombre":"Mostazal","zona":"Centro","tareas":[],"activo":false,"tipo":"comuna"},"mesa-antuco":{"id":"mesa-antuco","nombre":"Antuco","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-quilleco":{"id":"mesa-quilleco","nombre":"Quilleco","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-talcahuano":{"id":"mesa-talcahuano","nombre":"Talcahuano","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-alto-biobio":{"id":"mesa-alto-biobio","nombre":"Alto Biobío","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-coronel":{"id":"mesa-coronel","nombre":"Coronel","zona":"Sur","tareas":[],"activo":false,"tipo":"comuna"},"mesa-los-lagos":{"id":"mesa-los-lagos","nombre":"Los Lagos","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-guaitecas":{"id":"mesa-guaitecas","nombre":"Guaitecas","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-cochamo":{"id":"mesa-cochamo","nombre":"Cochamó","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-cisnes":{"id":"mesa-cisnes","nombre":"Cisnes","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"mesa-timaukel":{"id":"mesa-timaukel","nombre":"Timaukel","zona":"Austral","tareas":[],"activo":false,"tipo":"comuna"},"area-comunicaciones":{"id":"area-comunicaciones","nombre":"Comunicaciones","zona":"Nacional","tipo":"area","tareas":[{"id":"xmtj6r4vplsuv6","texto":"Credenciales","fecha":"2026-09-14","hecha":false},{"id":"xmtvke4e3vgtq4","texto":"Boletín","fecha":"2026-09-14","hecha":false},{"id":"xmtvkfb1rnkggp","texto":"Terminar grilla y empezar a publicar","fecha":"2026-09-11","hecha":false},{"id":"xmtvkg0o82m9oq","texto":"Post Desarrollo Local","fecha":"","hecha":false}],"activo":true},"area-dialogo-territorial":{"id":"area-dialogo-territorial","nombre":"Diálogo Territorial","zona":"Nacional","tipo":"area","tareas":[],"activo":false},"area-desarrollo":{"id":"area-desarrollo","nombre":"Desarrollo","zona":"Nacional","tipo":"area","tareas":[{"id":"xmtj59nleunf69","texto":"Informe todes (Tarea Jose)","hecha":false,"fecha":"2026-09-10"}],"activo":true},"mesa-diego-de-almagro":{"id":"mesa-diego-de-almagro","nombre":"Diego de Almagro","zona":"Norte","tipo":"comuna","activo":false,"tareas":[]}}}
 </script>
 
 <script>
@@ -388,16 +393,17 @@
   var PRISTINE = "<!doctype html>\n" + document.documentElement.outerHTML;
 
   // ---------- Constantes ----------
+  // Un pilar por dia de publicacion: lunes prensa, miercoles institucional, viernes avances.
   var PILARES = {
-    conocimiento: { nom:"Conocimiento",           hex:"#4D4E56" },
-    proyectos:    { nom:"Proyectos e iniciativas", hex:"#E28757" },
-    avances:      { nom:"Avances",                 hex:"#78AA6D" },
-    incidencia:   { nom:"Incidencia",              hex:"#7A80A3" }
+    prensa:        { nom:"Prensa",        hex:"#7A80A3" },
+    institucional: { nom:"Institucional", hex:"#E28757" },
+    avances:       { nom:"Avances",       hex:"#78AA6D" }
   };
   var PILAR_SIN = { nom:"Sin pilar", hex:"#A6A7B0" };
   function pilarDe(p) { return PILARES[p.pilar] || PILAR_SIN; }
   // Pilares que dejaron de existir y adónde va lo que estaba guardado con ellos.
-  var PILAR_VIEJO = { territorio:"conocimiento", personas:"proyectos", mesas:"proyectos" };
+  var PILAR_VIEJO = { territorio:"institucional", personas:"institucional", mesas:"institucional",
+                      conocimiento:"institucional", proyectos:"institucional", incidencia:"institucional" };
   var ESTADOS = ["Pendiente","En diseño","En revisión","Aprobado","Programado","Publicado"];
   var EST_CLASS = { "Pendiente":"e-pendiente","En diseño":"e-diseno","En revisión":"e-revision",
                     "Aprobado":"e-aprobado","Programado":"e-programado","Publicado":"e-publicado" };
@@ -515,6 +521,7 @@
     ["35","Quilaco","18zpEOPwT1V3tFe-kvtziL0XApnhxzNgJ"],
     ["36","Santa Bárbara","1RwiQ9N5qgWXdl0v0K1KNVv8wHdm2Hjnq"],
     ["37","Lo Espejo (2)","1nEgJHRdXyr2E7Jb1xHkAVfOIYhogDWNa"],
+    ["38","San Esteban","11c_s4OMWxFiOquXn-qaytczQrtY1hAv9"],
     ["00","Otros","1G6gbFMaSuB3xy64rKbESovtqq1NWamyT"]
   ];
 
@@ -572,6 +579,15 @@
     if (p.length !== 3) return { dia:"—", dow:"" };
     var d = new Date(+p[0], +p[1] - 1, +p[2]);
     return { dia: p[2], dow: DIAS[d.getDay()] };
+  }
+  // "2026-09-08" -> "8 sep". Sin año: las tareas son de corto plazo.
+  function fechaCorta(iso) {
+    var p = String(iso || "").split("-");
+    if (p.length !== 3) return "";
+    return (+p[2]) + " " + MESNOM[+p[1] - 1].slice(0, 3);
+  }
+  function estaVencida(t) {
+    return !!t.fecha && !t.hecha && t.fecha < isoDe(new Date());
   }
   function mesLabel(k) {
     var p = k.split("-");
@@ -805,6 +821,7 @@
     });
     mesas().forEach(function (f) {
       if (!f.tareas) f.tareas = [];
+      f.tareas.forEach(function (t) { if (t.fecha == null) t.fecha = ""; });
       if (f.activo == null) f.activo = false;
       if (!f.tipo) f.tipo = "comuna";   // Las 24 primeras se guardaron sin tipo.
       if (f.zona === "Transversal") f.zona = NACIONAL;   // Se llamaba así antes.
@@ -1038,6 +1055,7 @@
       return '<li class="' + (t.hecha ? "done" : "") + '">' +
         '<input type="checkbox" data-task="' + esc(f.id) + "|" + esc(t.id) + '"' + (t.hecha ? " checked" : "") + (soloLectura ? " disabled" : "") + ">" +
         "<span>" + esc(t.texto) + "</span>" +
+        (t.fecha ? '<em class="tfecha' + (estaVencida(t) ? " vencida" : "") + '">' + fechaCorta(t.fecha) + "</em>" : "") +
         (soloLectura ? "" : '<button class="btn ghost danger" data-deltask="' + esc(f.id) + "|" + esc(t.id) + '" title="Eliminar tarea">×</button>') +
         "</li>";
     }).join("");
@@ -1176,6 +1194,7 @@
       return '<div class="tareaedit">' +
         '<input type="checkbox" data-thecha="' + esc(t.id) + '"' + (t.hecha ? " checked" : "") + ">" +
         '<input type="text" data-ttexto="' + esc(t.id) + '" value="' + esc(t.texto) + '">' +
+        '<input type="date" data-tfecha="' + esc(t.id) + '" value="' + esc(t.fecha || "") + '" title="Fecha de entrega">' +
         '<button class="btn ghost danger" data-tborrar="' + esc(t.id) + '" title="Eliminar">×</button>' +
         "</div>";
     }).join("");
@@ -1439,7 +1458,7 @@
           var v = inp.value.trim();
           if (!v) return;
           mesas().forEach(function (m) {
-            if (m.id === id) m.tareas.push({ id:uid(), texto:v, hecha:false });
+            if (m.id === id) m.tareas.push({ id:uid(), texto:v, fecha:"", hecha:false });
           });
           marcar(); render();
         };
@@ -1543,6 +1562,13 @@
           marcar();
         });
       });
+      $$("[data-tfecha]").forEach(function (f) {
+        f.addEventListener("change", function () {
+          var id = f.getAttribute("data-tfecha");
+          m.tareas.forEach(function (t) { if (t.id === id) t.fecha = f.value; });
+          marcar(); render();
+        });
+      });
       $$("[data-thecha]").forEach(function (c) {
         c.onchange = function () {
           var id = c.getAttribute("data-thecha");
@@ -1562,7 +1588,7 @@
         var inp = $("#nuevaTareaDrawer");
         var v = inp.value.trim();
         if (!v) return;
-        m.tareas.push({ id: uid(), texto: v, hecha: false });
+        m.tareas.push({ id: uid(), texto: v, fecha: "", hecha: false });
         marcar(); render();
       };
       if ($("#addTareaDrawer")) $("#addTareaDrawer").onclick = añadirEnDrawer;
